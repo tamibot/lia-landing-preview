@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>LIA · Tu vendedora IA para infoproductores</title>
+  <meta name="description" content="Lia capta leads, califica y vende tus cursos 24/7. Vive dentro de GoHighLevel. $350 al mes — menos de lo que cuesta una vendedora junior.">
+  <meta name="keywords" content="vendedora IA, chatbot ventas, infoproductores, automatización cursos, IA WhatsApp, GoHighLevel, automatizar redes sociales">
+  <meta name="author" content="LIA">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liabotedu.com/">
+  <meta property="og:title" content="LIA · Tu vendedora IA para infoproductores">
+  <meta property="og:description" content="Lia vende tus cursos 24/7. $350/mes — menos que una vendedora junior. Vive dentro de GoHighLevel.">
+  <meta property="og:image" content="https://liabotedu.com/lia_ai_dashboard_mockup.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://liabotedu.com/">
+  <meta property="twitter:title" content="LIA · Tu vendedora IA para infoproductores">
+  <meta property="twitter:description" content="Lia vende tus cursos 24/7. $350/mes — menos que una vendedora junior.">
+  <meta property="twitter:image" content="https://liabotedu.com/lia_ai_dashboard_mockup.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Bricolage Grotesque"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            iosBlue: '#007AFF',
+            iosOrange: '#FF9500',
+            appleGray: '#FBFBFD',
+            ink: '#0A0A0B',
+            cream: '#FAFAF7',
+            brand: {
+              primary: '#007AFF',
+              secondary: '#FF9500',
+              light: '#E1F3FB',
+            },
+          },
+          borderRadius: {
+            'ios': '2.5rem',
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'fade-down': 'fadeDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'fade-in': 'fadeIn 1s ease-out forwards',
+            'float': 'float 6s ease-in-out infinite',
+            'scale-in': 'scaleIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeDown: {
+              '0%': { opacity: '0', transform: 'translateY(-40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.95)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.8' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #FAFAF7;
+      color: #0A0A0B;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .font-display {
+      font-family: 'Bricolage Grotesque', Inter, sans-serif;
+      letter-spacing: -0.04em;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    /* Custom keyframes for hero animations */
+    @keyframes chatIn {
+      0% { opacity: 0; transform: translateY(8px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-6deg); }
+      50% { transform: rotate(-4deg); }
+    }
+    @keyframes slideInBottom {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+
+    /* Hover lift for bento cards */
+    .bento-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bento-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+    }
+
+    .ios-shadow {
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-ios-blue {
+      background-color: #007AFF;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-ios-blue:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 122, 255, 0.3);
+    }
+
+    .btn-ios-orange {
+      background-color: #FF9500;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-ios-orange:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(255, 149, 0, 0.3);
+    }
+
+    .ios-card {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .ios-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Mobile text scaling adjustments - Refined for better readability */
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2.25rem !important;
+        /* Reduced from 2.75rem for better fit on small screens */
+        line-height: 1.15 !important;
+      }
+
+      .price-text {
+        font-size: 3rem !important;
+        /* Slightly smaller for better fit */
+      }
+
+      .section-padding {
+        padding-top: 3rem;
+        /* Reduced padding for tighter mobile layout */
+        padding-bottom: 3rem;
+      }
+    }
+  </style>
+  <link rel="preload" href="/lia-landing-preview/assets/lia_ai_dashboard_mockup-B0seMZYZ.png" as="image">
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/lia-landing-preview/assets/index-cnj3AN-4.js"></script>
+  <link rel="stylesheet" crossorigin href="/lia-landing-preview/assets/index-DYj4og7D.css">
+</head>
+
+<body class="overflow-x-hidden">
+  <div id="root"></div>
+</body>
+
+</html>
