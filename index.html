@@ -276,6 +276,73 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
+    /* Audio bars (speaking indicator) */
+    @keyframes audioBar {
+      0% { height: 4px; opacity: 0.5; }
+      100% { height: 14px; opacity: 1; }
+    }
+
+    /* Magnetic-feel hover for primary buttons */
+    .magnetic-hover {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .magnetic-hover:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    /* Subtle parallax-like float for hero phone */
+    @keyframes hero-float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      33% { transform: translateY(-4px) rotate(0.3deg); }
+      66% { transform: translateY(2px) rotate(-0.2deg); }
+    }
+    .hero-float {
+      animation: hero-float 8s ease-in-out infinite;
+    }
+
+    /* Number counter pulse on scroll into view */
+    @keyframes count-pulse {
+      0% { transform: scale(0.95); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Gradient text shift */
+    @keyframes text-shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .text-shimmer-blue {
+      background: linear-gradient(90deg, #007AFF 0%, #00C2FF 50%, #007AFF 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-shimmer 3s linear infinite;
+    }
+
+    /* Reveal-from-bottom for cards */
+    @keyframes card-reveal {
+      0% { opacity: 0; transform: translateY(24px) scale(0.98); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Underline draw on hover for links */
+    .link-draw {
+      position: relative;
+    }
+    .link-draw::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: -2px;
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .link-draw:hover::after { transform: scaleX(1); }
+
     /* Hover lift for bento cards */
     .bento-hover {
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -387,7 +454,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/lia-landing-preview/assets/index-pPtvVmnA.js"></script>
+  <script type="module" crossorigin src="/lia-landing-preview/assets/index-kcG3wJP8.js"></script>
   <link rel="stylesheet" crossorigin href="/lia-landing-preview/assets/index-DYj4og7D.css">
 </head>
 
