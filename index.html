@@ -274,24 +274,47 @@
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
     }
 
-    /* Mobile text scaling adjustments - Refined for better readability */
+    /* Anchor scroll offset to clear fixed navbar */
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+
+    /* ─── Mobile optimizations ─────────────────────────────────────── */
     @media (max-width: 640px) {
-      h1 {
-        font-size: 2.25rem !important;
-        /* Reduced from 2.75rem for better fit on small screens */
-        line-height: 1.15 !important;
+      /* Headlines: more readable scale on small screens */
+      h2.font-display {
+        font-size: 2.5rem !important;       /* 40px (was 48px) */
+        line-height: 1 !important;
+        letter-spacing: -0.035em !important;
+      }
+      h3.font-display {
+        font-size: 1.5rem !important;       /* 24px */
+        line-height: 1.1 !important;
       }
 
-      .price-text {
-        font-size: 3rem !important;
-        /* Slightly smaller for better fit */
+      /* Tighter section padding so content gets to the point faster */
+      section[class*="py-24"],
+      section[class*="py-36"],
+      div[class*="py-24"],
+      div[class*="py-36"] {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
       }
 
-      .section-padding {
-        padding-top: 3rem;
-        /* Reduced padding for tighter mobile layout */
-        padding-bottom: 3rem;
+      /* Touch-friendly CTA targets — 44px minimum (Apple HIG) */
+      button, a[role="button"] {
+        min-height: 44px;
       }
+
+      /* Body text breathing */
+      p {
+        line-height: 1.6;
+      }
+    }
+
+    /* Reduce hero phone shadow weight on mobile (perf) */
+    @media (max-width: 640px) and (prefers-reduced-motion: no-preference) {
+      .perspective-500 { perspective: none; }
     }
   </style>
   <link rel="preload" href="/lia-landing-preview/og-image.png" as="image">
@@ -306,7 +329,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/lia-landing-preview/assets/index-CzACdSE8.js"></script>
+  <script type="module" crossorigin src="/lia-landing-preview/assets/index-BwoMJbS9.js"></script>
   <link rel="stylesheet" crossorigin href="/lia-landing-preview/assets/index-DYj4og7D.css">
 </head>
 
