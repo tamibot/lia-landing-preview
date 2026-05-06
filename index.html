@@ -343,6 +343,84 @@
     }
     .link-draw:hover::after { transform: scaleX(1); }
 
+    /* ─── Scroll-reveal global ─────────────────────────────────────── */
+    @keyframes reveal-up {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes reveal-fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes reveal-scale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* All h2.font-display get subtle reveal animation when entering viewport */
+    h2.font-display {
+      animation: reveal-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    }
+
+    /* Section entrance smooth */
+    section[id] {
+      animation: reveal-fade 0.8s ease-out backwards;
+    }
+
+    /* Card hover lift global */
+    article {
+      will-change: transform;
+    }
+    article:hover {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+
+    /* Numbers count-up effect */
+    .count-up {
+      animation: count-pulse 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    }
+
+    /* Border glow on hover for interactive elements */
+    @keyframes border-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 122, 255, 0); }
+      50% { box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15); }
+    }
+    .border-glow-hover:hover {
+      animation: border-glow 1.4s ease-in-out infinite;
+    }
+
+    /* Slow horizontal pan for backgrounds */
+    @keyframes pan-bg {
+      0% { background-position: 0% center; }
+      100% { background-position: 100% center; }
+    }
+
+    /* Reveal stagger for lists */
+    .stagger-children > * {
+      animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    }
+    .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+    .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+    .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+    .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+    .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+    .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+
+    /* Hero typing cursor */
+    @keyframes blink-caret {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    /* Button pulse on idle (call-out CTAs) */
+    @keyframes idle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .idle-pulse {
+      animation: idle-pulse 4s ease-in-out infinite;
+    }
+
     /* Hover lift for bento cards */
     .bento-hover {
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -454,7 +532,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/lia-landing-preview/assets/index-kcG3wJP8.js"></script>
+  <script type="module" crossorigin src="/lia-landing-preview/assets/index-PuzJXIJR.js"></script>
   <link rel="stylesheet" crossorigin href="/lia-landing-preview/assets/index-DYj4og7D.css">
 </head>
 
